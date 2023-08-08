@@ -27,5 +27,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}promotion/'
         ) TBLPROPERTIES(
-            'primaryKey' = 'p_promo_sk' ${table_props_suffix}
+            'primaryKey' = 'p_promo_sk' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

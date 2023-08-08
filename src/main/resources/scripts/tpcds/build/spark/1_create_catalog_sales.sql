@@ -84,5 +84,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}catalog_sales/'
         ) PARTITIONED BY(cs_sold_date_sk) TBLPROPERTIES(
-            'primaryKey' = 'cs_item_sk,cs_order_number' ${table_props_suffix}
+            'primaryKey' = 'cs_item_sk,cs_order_number' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

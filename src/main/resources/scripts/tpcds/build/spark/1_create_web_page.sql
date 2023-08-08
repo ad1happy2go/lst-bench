@@ -19,5 +19,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}web_page/'
         ) TBLPROPERTIES(
-            'primaryKey' = 'wp_web_page_sk' ${table_props_suffix}
+            'primaryKey' = 'wp_web_page_sk' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

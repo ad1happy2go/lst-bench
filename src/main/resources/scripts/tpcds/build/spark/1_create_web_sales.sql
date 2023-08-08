@@ -84,5 +84,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}web_sales/'
         ) PARTITIONED BY(ws_sold_date_sk) TBLPROPERTIES(
-            'primaryKey' = 'ws_item_sk,ws_order_number' ${table_props_suffix}
+            'primaryKey' = 'ws_item_sk,ws_order_number' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

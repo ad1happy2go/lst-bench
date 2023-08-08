@@ -37,5 +37,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}web_site/'
         ) TBLPROPERTIES(
-            'primaryKey' = 'web_site_sk' ${table_props_suffix}
+            'primaryKey' = 'web_site_sk' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

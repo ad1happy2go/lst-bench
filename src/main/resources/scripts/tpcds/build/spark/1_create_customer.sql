@@ -23,5 +23,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}customer/'
         ) TBLPROPERTIES(
-            'primaryKey' = 'c_customer_sk' ${table_props_suffix}
+            'primaryKey' = 'c_customer_sk' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

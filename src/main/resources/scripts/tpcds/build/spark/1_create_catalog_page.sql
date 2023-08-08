@@ -14,5 +14,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}catalog_page/'
         ) TBLPROPERTIES(
-            'primaryKey' = 'cp_catalog_page_sk' ${table_props_suffix}
+            'primaryKey' = 'cp_catalog_page_sk' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

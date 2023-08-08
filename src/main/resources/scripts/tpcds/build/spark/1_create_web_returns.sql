@@ -56,5 +56,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}web_returns/'
         ) PARTITIONED BY(wr_returned_date_sk) TBLPROPERTIES(
-            'primaryKey' = 'wr_item_sk,wr_order_number' ${table_props_suffix}
+            'primaryKey' = 'wr_item_sk,wr_order_number' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );

@@ -40,5 +40,8 @@ CREATE
             USING ${table_format} OPTIONS(
             PATH '${data_path}store/'
         ) TBLPROPERTIES(
-            'primaryKey' = 's_store_sk' ${table_props_suffix}
+            'primaryKey' = 's_store_sk' ${table_props_suffix},
+            'hoodie.metadata.enable' = 'true',
+            'hoodie.metadata.index.column.stats.enable' = 'true',
+            'hoodie.enable.data.skipping' = 'true'
         );
