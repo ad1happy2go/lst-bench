@@ -11,5 +11,5 @@ CREATE
             'primaryKey' = 'ib_income_band_sk' ${table_props_suffix},
             'hoodie.metadata.enable' = 'true',
             'hoodie.metadata.index.column.stats.enable' = 'true',
-            'hoodie.enable.data.skipping' = 'true'
+            'hoodie.enable.data.skipping' = 'false'
         );

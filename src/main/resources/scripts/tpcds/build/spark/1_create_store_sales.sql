@@ -67,5 +67,5 @@ CREATE
             'primaryKey' = 'ss_item_sk,ss_ticket_number' ${table_props_suffix},
             'hoodie.metadata.enable' = 'true',
             'hoodie.metadata.index.column.stats.enable' = 'true',
-            'hoodie.enable.data.skipping' = 'true'
+            'hoodie.enable.data.skipping' = 'false'
         );
