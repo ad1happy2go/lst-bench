@@ -164,7 +164,7 @@ public class LSTBenchmarkExecutor extends BenchmarkRunnable {
       try {
         Validate.isTrue(result.get());
       } catch (InterruptedException | ExecutionException e) {
-        throw new RuntimeException("Thread did not finish correctly", e);
+        LOGGER.warn("Thread did not finish correctly", e);
       }
     }
   }
