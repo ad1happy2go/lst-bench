@@ -79,6 +79,7 @@ ws_items AS(
                         ${catalog}.${database}.date_dim
                     WHERE
                         d_date = '2000-02-12'
+                    LIMIT 1
                 )
         )
         AND ws_sold_date_sk = d_date_sk
