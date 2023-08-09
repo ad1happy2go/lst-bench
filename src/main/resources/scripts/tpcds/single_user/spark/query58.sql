@@ -21,6 +21,7 @@ WITH ss_items AS(
                         ${catalog}.${database}.date_dim
                     WHERE
                         d_date = '2000-02-12'
+                    LIMIT 1
                 )
         )
         AND ss_sold_date_sk = d_date_sk
@@ -50,6 +51,7 @@ cs_items AS(
                         ${catalog}.${database}.date_dim
                     WHERE
                         d_date = '2000-02-12'
+                    LIMIT 1
                 )
         )
         AND cs_sold_date_sk = d_date_sk
