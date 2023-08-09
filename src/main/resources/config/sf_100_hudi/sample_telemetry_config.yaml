@@ -1,0 +1,17 @@
+# Description: Telemetry Configuration
+---
+version: 1
+connection:
+  id: spark_0
+  driver: org.apache.hive.jdbc.HiveDriver
+  url: jdbc:hive2://localhost:10001
+  username: ''
+  password: ''
+execute_ddl: true
+ddl_file: 'src/main/resources/scripts/logging/spark/ddl.sql'
+insert_file: 'src/main/resources/scripts/logging/spark/insert.sql'
+# The following parameter values will be used to replace the variables in the logging statements.
+parameter_values:
+  data_path: 's3a://rxusandbox-us-west-2/testcases/lstbench/hudi/sf_100/'
+  catalog: spark_catalog
+  database: hudi_tpcds_telemetry
