@@ -17,7 +17,7 @@ parameter_values:
   external_catalog: spark_catalog
   external_database: external_tpcds
   external_table_format: csv
-  external_data_path: 's3://rxusandbox-us-west-2/testcases/lstbench/tpcds_external/sf_10_csvheader_partitioned/'
+  external_data_path: 's3://rxusandbox-us-west-2/testcases/lstbench/tpcds_external/sf_10/'
   external_options_suffix: ',header="true"'
   external_tblproperties_suffix: ''
   catalog: spark_catalog
