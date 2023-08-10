@@ -12,6 +12,6 @@ ddl_file: 'src/main/resources/scripts/logging/spark/ddl.sql'
 insert_file: 'src/main/resources/scripts/logging/spark/insert.sql'
 # The following parameter values will be used to replace the variables in the logging statements.
 parameter_values:
-  data_path: 's3a://rxusandbox-us-west-2/testcases/lstbench/hudi/sf_10_1/'
+  data_path: 's3a://rxusandbox-us-west-2/testcases/lstbench/hudi/sf_10_2/'
   catalog: spark_catalog
   database: hudi_tpcds_telemetry
