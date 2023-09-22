@@ -17,12 +17,12 @@ parameter_values:
   external_catalog: spark_catalog
   external_database: external_tpcds
   external_table_format: csv
-  external_data_path: 's3://rxusandbox-us-west-2/testcases/lstbench/tpcds_external/sf_100/'
+  external_data_path: 's3://performance-benchmark-datasets-us-east-2/TPC-DS/100GB/'
   external_options_suffix: ',header="true"'
   external_tblproperties_suffix: ''
   catalog: spark_catalog
   database: hudi_tpcds
   table_format: hudi
-  data_path: 's3a://rxusandbox-us-west-2/testcases/lstbench/hudi/sf_100/'
+  data_path: 's3://performance-benchmark-datasets-us-east-2/TPC-DS/hudi/100GB/'
   options_suffix: ''
   table_props_suffix: ', type = "mor"'

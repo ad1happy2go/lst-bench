@@ -16,17 +16,6 @@ phases:
     - template_id: setup_data_maintenance
     - template_id: setup_data_maintenance
     - template_id: setup_data_maintenance
-- id: init
-  sessions:
-  - tasks:
-    - template_id: init
-- id: build
-  sessions:
-  - tasks:
-    - template_id: build
-      replace_regex:
-      - pattern: '(?i)varchar\(.*\)|char\(.*\)'
-        replacement: 'string'
 - id: single_user_1
   sessions:
   - tasks:
